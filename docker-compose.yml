@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  simple-flask:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: simple-flask
+    image: simple-flask
+    restart: unless-stopped
+    ports:
+      - '8080:8080'
